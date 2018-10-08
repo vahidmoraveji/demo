@@ -1,0 +1,163 @@
+
+body {
+  background: #fff;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 25px;
+  font-size: 16apx;
+  font-weight: 300;
+  overflow-x: hidden;
+  min-height: 1000px;
+  background-attachment: fixed;
+  /* background: url("../img/dashboard_Bg.jpg") no-repeat center; */
+}
+
+li {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+color: #1d3156;
+font-weight: 700;
+}
+
+h1 {
+  font-size: 30px; }
+
+h2 {
+  font-size: 26px; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 20px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 16px; }
+
+h6 {
+  font-size: 14px; }
+
+p {
+  margin: 10px 0 0; }
+
+section {
+  width: 100%; }
+
+a:focus,
+a:hover,
+a:-webkit-any-link,
+a {
+  text-decoration: none;
+  cursor: pointer; }
+  select {
+    outline: 0;
+    border: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;       /* remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    background: url("../img/selectArrow.jpg") center no-repeat;
+    background-position: 100%;
+    
+ }
+ option {
+  border: none;
+  outline: 0;
+}
+input {
+  background: none; }
+
+input,
+input:focus {
+  outline: none;
+  border: none; }
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: transparent; }
+
+input[type="number"],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: textfield;
+  -webkit-appearance: none; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+button {
+  outline: none;
+  border: none;
+  background: none; }
+
+
+  textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+    appearance: none;
+    resize: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.relative{
+  position: relative; 
+}
+ 
+
+.absolute{position: absolute;}
+
+.blockMe{
+  display: block; 
+}
+  
+
+.hiddenMe{
+  display: none;
+}
+
+.visible{
+  opacity: 1;
+  visibility: inherit;
+ }
+
+.inVisible{
+  opacity: 0;
+  visibility: hidden; }
+
+
+
+.zeroPadding, ul, li {
+  padding: 0; }
+
+.zeroMargin, ul, li {
+  margin: 0; }
+
+
+
+
+
+
+
+

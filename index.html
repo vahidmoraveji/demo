@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/daterengPicker.css">
+    <link rel="stylesheet" href="css/vis-timeline-graph2d.min.css">
+    <link rel="stylesheet" href="css/vis.min.css">
+    <!-- <script src="js/prefix.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,700,900" rel="stylesheet">
+    <title>Radicalization Analysis</title>
+</head>
+
+<body>
+
+    <section class="mainPanel">
+        
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-8">
+                        <div class="author">
+                                <div class="aoutorItem"><span>Name Of Paper : </span>Radicalization Analysis</div>
+                                <div class="aoutorItem"><span>Name Of Authors: </span>Vahid Moraveji Hashemi and  Dr Amin Beheshti </div>
+                            </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="panelLeftItem socialNetwork">
+                        <div class="title">social network</div>
+                        <div class="dropdown">
+                            <label for="">select network : </label>
+                             <select>
+                                <option> Facebook</option>
+                                <option>Twitter</option>
+                                <option>Linkedin</option>
+                                <option> Instagram</option>
+                        </select>
+                        </div>
+                        <div class="search">
+                              <input type="text" placeholder="search network">
+                        <button type="button" class="btnBlue">search</button>
+                        </div>
+                      
+                       
+                    </div>
+                    <div class=" panelLeftItem users">
+                            <div class="title">Users ID</div>
+                            <div class="dropdown">
+                                    <label for="">select user : </label>
+                                 <select>
+                                    <option>johny Cash</option>
+                                    <option> brayan Depalma</option>
+                                    <option> stive macQueen</option>
+                                    <option> ingmar Bergman</option>
+                            </select>
+                            </div>
+                            <div class="search">
+                              <button type="button" class="btnBlue">select User</button>
+                              </div>
+
+                    </div>
+                    <div class=" panelLeftItem timePeriod">
+                            <div class="title">Time Period
+                                </div>
+                            <div class="dropdown">
+                                <label for="">Select Start and End</label>
+                               
+                            </div>
+                            <div class="search">
+                                    <input type="text" name="daterange" value="09/01/2018 - 09/15/2018" />
+
+                            </div>
+                    </div>
+                    <div class=" panelLeftItem users">
+                        <div class="title">Tweet Id</div>
+                        <div class="dropdown">
+                                <label for="">select Tweet Id : </label>
+                             <select>
+                                <option>@fdrff</option>
+                                <option>@er33</option>
+                                <option>@fderro2028</option>
+                                <option>@rfrfrfr</option>
+                        </select>
+                        </div>
+                       
+
+                </div>
+                    <div class="showDetails">
+                        <button class="btnOrange">Show Details</button>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-8 col-md-8">
+                        
+                    <div class="diagram" >
+                        <div class="chartType">
+                            <button id="bar">bar Chart</button>
+                            <button id="linear">linear Chart</button>
+                            <button id="Scatterplot">Scatterplot</button>
+                        </div>
+                        <div class="xTitle">Time</div>
+                        <div class="yTitle">Rate</div>
+                        <div id="diagramVisual"></div>
+                    </div>
+                    <div class="panelTitle"><span>Radicalization - </span>Behavior Analytics</div>
+                    <div class="miningPanel">
+                        <div class="miningBox" id="Content">
+                            <div class="title">
+                                    Content Analysis
+                            </div>
+                            <div class="proccess" >
+                                <div class="proccessTop">
+                                        <button class="btnOrange">Extract Text</button>
+                                      
+                                        <p> Soon the terrorists in East #Aleppo #Syria will realize that there is no paradise and Gulf Arab money cannot be spend after they are dead.</p>
+                                        <span class="tooltip">
+                                                It can extract the text of tweet
+                                                </span>
+                                       
+                                </div>
+                                <div class="proccessBottom " >
+                                        <div class="proccessBottom__item">
+                                            <button class="btnBlueGray">Sentiment</button>
+                                            <p> Negative </p>
+                                            <span class="tooltip">
+                                            sentiment or the writer's attitude in a the text of tweet can be positive, negative, or neutral.
+                                            </span>
+                                        </div>
+                                        <div class="proccessBottom__item">
+                                            <button class="btnBlueGray">Extract Keywords</button>
+                                            <p> terrorist, East #Aleppo #Syria, no paradise, Gulf Araf money, cannot, spend, dead</p>
+                                            <span class="tooltip">
+                                                    A keyword is a vocabulary which repeats in a passage repeatedly than we would anticipate to happen accidentally per se
+                                                    </span>
+                                        </div>
+
+                                        <div class="proccessBottom__item">
+                                            <button class="btnBlueGray">Extract Named Entities</button>
+                                            <p>East #Aleppo #Syria, Gulf Arab money </p>
+                                            <span class="tooltip">
+                                                    A named entity is an object in the real world, like places, firms, individuals, products, etc., which could be designated by a certain name.
+                                                    </span>
+                                        </div>
+                                        <div class="proccessBottom__item">
+                                            <button class="btnBlueGray">Extract Part of Speech</button>
+                                            <p> terrorist = noun, East #Aleppo #Syria = noun, Gulf Araf money = noun, cannot = verb, spend = verb, dead = adjective </p>
+                                            <span class="tooltip">
+                                                    A part of speech is a group of vocabularies which have identical grammatical properties. It can be verb, noun, pronoun, adjective, adverb and etc.
+                                                    </span>
+                                        </div>
+                                        <div class="proccessBottom__item">
+                                            <button class="btnBlueGray">Extract Synonym</button>
+                                        <p> terrorsit = bomber, assassin, hijacker, no paradise = no heaven, dead = no alive, </p>
+                                        <span class="tooltip">
+                                                A synonym is a phrase which conveys the same or almost the same meaning as another phrase in the identical language
+                                                </span>
+                                        </div>
+                                        <div class="proccessBottom__item">
+                                            <button class="btnBlueGray">Extract Stem</button>
+                                        <p> terrorism, Eastern, spending, spent, die, dying</p>
+                                        <span class="tooltip">
+                                                A stem is a form which is attached to a suffix or prefix to make a new word with almost the same meaning
+                                                </span>
+                                        </div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                        <div class="miningBox" id="Context">
+                                <div class="title">
+                                        Context Analysis
+                                </div>
+                                <div class="proccess">
+                                    <div class="proccessTop">
+                                            <button class="btnOrange">Context Analysis</button>
+                                            <span class="tooltip">
+                                                    It can analyse the context of tweet
+                                                    </span>
+                                    </div>
+                                    <div class="proccessBottom sliding">
+                                            <div class="proccessBottom__item">
+                                                <button class="btnBlueGreen">Mental Health</button>
+                                                <span class="tooltip">
+                                                        including anxiety, depression and other mental disorders
+                                                        </span>
+                                            </div>
+                                            <div class="proccessBottom__item">
+                                                <button class="btnBlueGreen">Frustration</button>
+                                                <span class="tooltip">
+                                                        It can be assessed by the number of negative and swear words like shit, fuck, damn and etc.
+                                                        </span>
+                                            </div>
+                                            <div class="proccessBottom__item">
+                                                <button class="btnBlueGreen">Discrimination</button>
+                                                <span class="tooltip">
+                                                        It can be assessed by using some keywords like sick, Muslim, religious, Christian, hate, etc.
+                                                        </span>
+                                            </div>
+                                            <div class="proccessBottom__item">
+                                                <button class="btnBlueGreen">Educational level</button>
+                                                <span class="tooltip">
+                                                        It can be assessed by using some keywords like university student, high university degree, bachelor, master, PhD, doctor, literate and etc.
+                                                        </span>
+                                            </div>
+                                            <div class="proccessBottom__item">
+                                                <button class="btnBlueGreen">Introversion</button>
+                                                <span class="tooltip">
+                                                        This criterion can be measured by the length of the sentences and use of ellipses in the tweets.
+                                                        </span>
+                                            </div>
+                                            <div class="proccessBottom__item">
+                                                <button class="btnBlueGreen">Political ideology</button>
+                                                <span class="tooltip">
+                                                        It can be assessed by using some keywords like anarchishm, chaos, chaotic, anarchy, nihilist, terrorist, rebel, revolutionary, revolutionist and revolution.
+                                                        </span>
+                                            </div>
+                                            <div class="proccessBottom__item">
+                                                <button class="btnBlueGreen">Origin</button>
+                                                <span class="tooltip">
+                                                        It can be assessed by some words like first generation, second generation.
+                                                        </span>
+                                            </div>
+                                            <div class="proccessBottom__item">
+                                                <button class="btnBlueGreen">Terrorism</button>
+                                                <span class="tooltip">
+                                                        It can assessed by words like violent actions, aggressive behavior, violence, brutality, brute force, roughness, ferocity, savagery and so many other words.
+                                                        </span>
+                                            </div>
+                                            <div class="proccessBottom__item">
+                                                <button class="btnBlueGreen">Racism</button>
+                                                <span class="tooltip">
+                                                        It can be assessed by words like racial bigot, racialist, prejudiced, bigoted, biased, intolerant, illiberal, anti-Semitic.
+                                                        </span>
+                                            </div>
+                                            <div class="proccessBottom__item">
+                                                <button class="btnBlueGreen">Negative ideas about Western Society</button>
+                                                <span class="tooltip">
+                                                        It can be assessed by words like Western, hate, suck, people, west, Europe, USA, US, bloody, sick, impure, kuffar, kafir.
+                                                        </span>
+                                            </div>
+                                            <div class="proccessBottom__item">
+                                                <button class="btnBlueGreen">Positive ideas about religion</button>
+                                                <span class="tooltip">
+                                                        It can be assessed by words like religious, Islam, Muslim, good, best, nice, Christian, positive, excellent, happy and so on.
+                                                        </span>
+                                            </div>
+                                    </div>
+                                    
+    
+                                </div>
+                            </div>
+                            <div class="miningBox" id="Activity">
+                                    <div class="title">
+                                            Activity Analysis
+                                    </div>
+                                    <div class="proccess">
+                                        <div class="proccessTop">
+                                                <button class="btnOrange">Activity Analysis</button> 
+                                                <span class="tooltip">
+                                                        It can analyse the activity of tweet
+                                                        </span>
+                                        </div>
+                                        <div class="proccessBottom sliding">
+                                                <div class="proccessBottom__item">
+                                                    <button class="btnOrangeGr">Number of followers</button>
+                                                    <span class="tooltip">
+                                                            Is the number of followers which each user has in a social network
+                                                            </span>
+                                                </div>
+                                                <div class="proccessBottom__item">
+                                                    <button class="btnOrangeGr">Number of friends</button>
+                                                    <span class="tooltip">
+                                                            Is the number of friends that each person has in a social network
+                                                            </span>
+                                                </div>
+                                               <div class="proccessBottom__item">
+                                                    <button class="btnOrangeGr">Pageview count</button>
+                                                    <span class="tooltip">
+                                                            Is the number of people who have seen your page in a specific time or day
+                                                            </span>
+                                                </div>
+                                                <div class="proccessBottom__item">
+                                                    <button class="btnOrangeGr">Audience size</button>
+                                                    <span class="tooltip">
+                                                            Is the number of visitors who have visited your page, ads and status in a social network
+                                                            </span>
+                                                </div>
+                                                <div class="proccessBottom__item">
+                                                    <button class="btnOrangeGr">Replies count</button>
+                                                    <span class="tooltip">
+                                                            Is the number of reply messages that each user sends in a social network
+                                                            </span>
+                                                </div>
+                                                <div class="proccessBottom__item">
+                                                    <button class="btnOrangeGr">Likes count</button>
+                                                    <span class="tooltip">
+                                                            Is the number of likes which each user receives from his/her friends
+                                                            </span>
+                                                </div>
+                                                <div class="proccessBottom__item">
+                                                    <button class="btnOrangeGr">Mention count</button>
+                                                    <span class="tooltip">
+                                                            Is the number of people who are mentioned in each post or tag in a social network
+                                                            </span>
+                                                </div>
+                                                <div class="proccessBottom__item">
+                                                    <button class="btnOrangeGr">Activity rate</button>
+                                                    <span class="tooltip">
+                                                            Is the number of log-in (as an activity) that each user does in a period of time
+                                                            </span>
+                                                </div>
+                                                <div class="proccessBottom__item">
+                                                    <button class="btnOrangeGr">Klout score</button>
+                                                    <span class="tooltip">
+                                                            Is a criterion for assessing influence of users on social platforms like social networks
+                                                            </span>
+                                                </div>
+                                                <div class="proccessBottom__item">
+                                                    <button class="btnOrangeGr">Profile rank</button>
+                                                    <span class="tooltip">
+                                                            Is a metric that utilizes activity traits and popularity of each user to classify them based on their impact
+                                                            </span>
+                                                </div>
+                                                <div class="proccessBottom__item">
+                                                    <button class="btnOrangeGr">Outreach score</button>
+                                                    <span class="tooltip">
+                                                            Is an activity of giving facilities to any individuals who may not access to those facilities
+                                                            </span>
+                                                </div>
+                                        </div>
+                                        
+        
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      
+    <script src="js/jquery-3.2.1.min.js"></script>
+   <script src="js/moment.js"></script>
+   <script src="js/dateRengPicker.js"></script>
+   <script src="js/vis.min.js"></script>
+  
+    <script src="js/page.home.js"></script>
+    <script>
+           
+            </script>
+</body>
+
+</html>
